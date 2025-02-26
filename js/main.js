@@ -1,18 +1,32 @@
-// Obtener el elemento canvas del DOM por su ID
-let canvas = document.getElementById("canvas");
+function drawRectangle() {
+    let canvas = document.getElementById("canvas1");
+    let ctx = canvas.getContext("2d");
+    ctx.fillStyle = "rgb(1, 38, 49)";
+    ctx.fillRect(50, 60, 150, 150);
+}
 
-// Obtener el contexto de dibujo 2D del canvas para poder dibujar en él
-let ctx = canvas.getContext("2d");
+function drawLine() {
+    let canvas = document.getElementById("canvas2");
+    let ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.moveTo(50, 50);
+    ctx.lineTo(250, 250);
+    ctx.strokeStyle = "red";
+    ctx.lineWidth = 5;
+    ctx.stroke();
+}
 
-// Establecer el color de relleno utilizando valores RGB
-// En este caso, el color será un tono de azul: rgb(0, 0, 255)
-ctx.fillStyle = "rgb(1, 38, 49)";
-//Cambio
+function drawCircle() {
+    let canvas = document.getElementById("canvas3");
+    let ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(150, 150, 70, 0, Math.PI * 2);
+    ctx.fillStyle = "blue";
+    ctx.fill();
+}
 
-// Dibujar un rectángulo relleno en el canvas
-// El primer valor (50) es la posición horizontal (X) del vértice superior izquierdo del rectángulo
-// El segundo valor (60) es la posición vertical (Y) del vértice superior izquierdo del rectángulo
-// El tercer valor (150) es el ancho del rectángulo
-// El cuarto valor (150) es la altura del rectángulo
-ctx.fillRect(50, 60, 150, 150);
-//holas
+document.addEventListener("DOMContentLoaded", () => {
+    drawRectangle();
+    drawLine();
+    drawCircle();
+});
