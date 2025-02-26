@@ -7,7 +7,7 @@ let ctx = canvas.getContext("2d");
 // Establecer el color de relleno utilizando valores RGB
 // En este caso, el color será un tono de azul: rgb(0, 0, 255)
 ctx.fillStyle = "rgb(1, 38, 49)";
-
+//Cambio
 
 // Dibujar un rectángulo relleno en el canvas
 // El primer valor (50) es la posición horizontal (X) del vértice superior izquierdo del rectángulo
